@@ -48,7 +48,7 @@ class mlp:
 		self.model.add(Dense(output_dim=10))
 		self.model.add(Activation("softmax"))
 		sgd = optimizers.SGD(lr=0.001, momentum=0.0005)
-		self.model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
+		self.model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['acc'])
 		self.model.summary()
 		
 	def train_model(self):
